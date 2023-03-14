@@ -26,17 +26,13 @@ SHELL ["/bin/bash", "-c"]
 
 # dependencies
 RUN apt-get update --fix-missing && \
-    apt-get install -y ros-humble-rviz2
-
-# dependencies
-RUN apt-get update --fix-missing && \
     apt-get install -y git \
                        nano \
                        vim \
                        python3-pip \
                        libeigen3-dev \
                        tmux \
-                       ros-foxy-rviz2
+                       ros-humble-rviz2
 RUN apt-get -y dist-upgrade
 RUN pip3 install transforms3d
 
